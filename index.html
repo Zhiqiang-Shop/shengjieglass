@@ -266,84 +266,19 @@
             align-items: center;
             position: relative;
         }
-        .hero-glass-display {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+        .hero-main-image {
             width: 100%;
-            max-width: 480px;
-        }
-        .hero-glass-item {
+            max-width: 500px;
             aspect-ratio: 1/1;
-            border-radius: 50%;
-            background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.2), transparent 60%);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 -10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            transition: transform 0.5s ease;
+            border-radius: 24px;
+            background-image: url('images/hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            transition: transform 0.4s ease;
         }
-        .hero-glass-item:hover {
-            transform: scale(1.04);
-        }
-        .hero-glass-item.g1 {
-            background: radial-gradient(circle at 30% 25%, rgba(255, 200, 150, 0.5), rgba(180, 80, 50, 0.6) 60%, rgba(80, 30, 10, 0.8));
-            grid-column: 1;
-            grid-row: 1;
-        }
-        .hero-glass-item.g2 {
-            background: radial-gradient(circle at 40% 30%, rgba(200, 220, 240, 0.5), rgba(100, 130, 180, 0.6) 55%, rgba(40, 60, 100, 0.8));
-            grid-column: 2;
-            grid-row: 1;
-            margin-top: 20px;
-        }
-        .hero-glass-item.g3 {
-            background: radial-gradient(circle at 25% 30%, rgba(250, 230, 150, 0.5), rgba(200, 170, 80, 0.6) 55%, rgba(120, 90, 30, 0.8));
-            grid-column: 3;
-            grid-row: 1;
-            margin-top: 40px;
-        }
-        .hero-glass-item.g4 {
-            background: radial-gradient(circle at 35% 30%, rgba(160, 210, 160, 0.5), rgba(60, 140, 80, 0.6) 55%, rgba(20, 80, 40, 0.8));
-            grid-column: 1;
-            grid-row: 2;
-            margin-top: -10px;
-        }
-        .hero-glass-item.g5 {
-            background: radial-gradient(circle at 30% 25%, rgba(220, 180, 120, 0.5), rgba(160, 110, 60, 0.6) 55%, rgba(80, 50, 20, 0.8));
-            grid-column: 2;
-            grid-row: 2;
-            margin-top: 10px;
-        }
-        .hero-glass-item.g6 {
-            background: radial-gradient(circle at 40% 30%, rgba(200, 100, 100, 0.5), rgba(160, 50, 50, 0.6) 55%, rgba(80, 20, 20, 0.8));
-            grid-column: 3;
-            grid-row: 2;
-            margin-top: 30px;
-        }
-        .hero-glass-item.g7 {
-            background: radial-gradient(circle at 30% 25%, rgba(230, 210, 180, 0.5), rgba(180, 150, 110, 0.6) 55%, rgba(100, 70, 40, 0.8));
-            grid-column: 2;
-            grid-row: 3;
-            margin-top: 10px;
-            aspect-ratio: 1/1.4;
-            border-radius: 40% 40% 30% 30% / 60% 60% 30% 30%;
-        }
-        .hero-glass-item.g8 {
-            background: radial-gradient(circle at 35% 30%, rgba(210, 180, 140, 0.5), rgba(160, 120, 80, 0.6) 55%, rgba(80, 50, 20, 0.8));
-            grid-column: 3;
-            grid-row: 3;
-            margin-top: 20px;
-            aspect-ratio: 1/1.4;
-            border-radius: 40% 40% 30% 30% / 60% 60% 30% 30%;
-        }
-        .glass-shine {
-            position: absolute;
-            top: 10%;
-            left: 15%;
-            width: 30%;
-            height: 20%;
-            background: radial-gradient(ellipse, rgba(255, 255, 255, 0.3), transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
+        .hero-main-image:hover {
+            transform: scale(1.02);
         }
 
         /* ===== SECTION COMMON ===== */
@@ -788,10 +723,10 @@
             }
             .hero-visual {
                 order: -1;
+                margin-bottom: 20px;
             }
-            .hero-glass-display {
-                max-width: 360px;
-                margin: 0 auto;
+            .hero-main-image {
+                max-width: 400px;
             }
             .about-grid,
             .custom-wrap,
@@ -856,15 +791,14 @@
             .contact-wrap {
                 gap: 30px;
             }
+            .hero-main-image {
+                max-width: 320px;
+            }
         }
 
         @media (max-width: 480px) {
             .products-grid {
                 grid-template-columns: 1fr;
-            }
-            .hero-glass-display {
-                max-width: 280px;
-                gap: 12px;
             }
             .custom-features {
                 grid-template-columns: 1fr;
@@ -877,6 +811,9 @@
             }
             .product-info {
                 padding: 16px 18px 20px;
+            }
+            .hero-main-image {
+                max-width: 280px;
             }
         }
 
@@ -945,16 +882,7 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-glass-display">
-                    <div class="hero-glass-item g1"><div class="glass-shine"></div></div>
-                    <div class="hero-glass-item g2"><div class="glass-shine"></div></div>
-                    <div class="hero-glass-item g3"><div class="glass-shine"></div></div>
-                    <div class="hero-glass-item g4"><div class="glass-shine"></div></div>
-                    <div class="hero-glass-item g5"><div class="glass-shine"></div></div>
-                    <div class="hero-glass-item g6"><div class="glass-shine"></div></div>
-                    <div class="hero-glass-item g7"><div class="glass-shine"></div></div>
-                    <div class="hero-glass-item g8"><div class="glass-shine"></div></div>
-                </div>
+                <div class="hero-main-image"></div>
             </div>
         </div>
     </section>
@@ -1032,7 +960,7 @@
                 <!-- Product Example 5 -->
                 <div class="product-card">
                     <div class="product-image" style="background-image: url('images/Product Example 5.jpg');">
-                        <!-- No badge if you like -->
+                        <!-- No badge -->
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">Product Example 5</h3>
